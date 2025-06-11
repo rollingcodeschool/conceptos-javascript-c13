@@ -40,6 +40,16 @@ switch (opcion) {
     }
     break;
   case "3":
+    const montoExtraer = parseFloat(prompt("Ingresa el monto a extraer"));
+    if (montoExtraer <= saldo) {
+      saldo = saldo - montoExtraer;
+      document.writeln(
+        `El monto a extraer es $${montoExtraer}, tu saldo actual es $${saldo}`
+      );
+      //document.writeln('El monto a extras es $'+montoExtraer+', tu saldo actual es $' + saldo)
+    } else {
+      alert("monto invalido");
+    }
     break;
   default:
     alert("ingresaste una opción erronea");
