@@ -38,7 +38,7 @@ for(inicializar variable; condicion logica; increamentar/decrementar variable){
 }
 */
 
-for(let indice = -1; indice >= 0 ; indice-- ){
+for(let indice = 10; indice >= 0 ; indice-- ){
   document.writeln(`<p>Cuenta regresiva N ${indice}</p>`);
 }
 
