@@ -8,12 +8,12 @@ console.log(filas, columnas);
 //dibujar la tabla
 document.writeln(`<table class='table table-striped'><tbody>`);
 for (let indiceFilas = 0; indiceFilas < filas; indiceFilas++) {
-  document.writeln(`
-      <tr>
-        <td class='p-2'>35</td>
-      </tr>`);
+  document.writeln(`<tr>`);
+  for(let indiceColumnas=0; indiceColumnas < columnas; indiceColumnas++){
+    document.writeln(`<td class='p-2'>35</td>`);
+  }
+  document.writeln(`</tr>`);
 }
-
 document.writeln(`</tbody></table>`);
 
 //dibujar el valor de las celdas
