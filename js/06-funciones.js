@@ -28,6 +28,7 @@ function mostrarCancion(nombreCancion) {
 const sumar = (numero1, numero2) => numero1 + numero2;
 
 // llamar o invocar a la funcion
+
 saludar();
 const nombre = prompt("ingresa tu nombre");
 const apellido = prompt("ingresa tu apellido");

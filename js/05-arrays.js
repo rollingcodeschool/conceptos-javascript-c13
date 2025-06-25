@@ -56,3 +56,38 @@ mostrarCanciones("Borrar un elemento del medio del array");
 //modificar elementos del array
 canciones[3] = "Sobredosis de TV";
 mostrarCanciones("Modificar un elemento del array");
+
+// metodos extras de arrays
+const nombreCancion = prompt("Ingresa un nombre de cancion");
+// find
+
+const cancionAlmacenada = canciones.find((cancion) => nombreCancion === cancion);
+console.log(cancionAlmacenada);
+
+// if(cancionAlmacenada){
+//  document.writeln('<p>La canción buscada existe</p>')
+// }else{
+//  document.writeln('<p>La canción buscada no existe</p>')
+// }
+
+//operador ternario (condicion logica)? si se cumple la condicion hago esto : si no se cumple la condicion hago esto otro
+
+const respuesta = cancionAlmacenada
+  ? "La canción buscada existe"
+  : "La canción buscada no existe";
+document.writeln(`<p>${respuesta}</p>`);
+
+const indiceCancion = canciones.findIndex((cancion)=> nombreCancion === cancion)
+
+const indiceCancionBuscada = indiceCancion > -1
+  ? "La canción esta en la posicion "+ indiceCancion +' del array canciones.'
+  : "La canción buscada no existe";
+document.writeln(`<p>${indiceCancionBuscada}</p>`);
+
+const cancionesFiltradas = canciones.filter((item)=> item.length >=13 )
+
+console.log(cancionesFiltradas)
+
+document.writeln('<ul class="list-group">')
+cancionesFiltradas.map((cancion, indice )=> document.writeln(`<li class="list-group-item">${cancion} - Indice: ${indice}</li>`) )
+document.writeln('</ul>')
